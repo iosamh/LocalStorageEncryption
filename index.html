@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure File Encryption</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="title">Upload File</h1>
+            <p class="description">Upload the file you want to Encrypt or Decrypt</p>
+            <div class="upload-box">
+                <div class="upload-area">
+                    <input type="file" id="fileInput" hidden aria-describedby="fileDragArea">
+                    <label for="fileInput" class="file-drag-area" id="fileDragArea">
+                        Drag and drop file here
+                        <span class="or">OR</span>
+                        <span class="browse-button">Browse Files</span>
+                    </label>
+                    
+                </div>
+                <div class="encryption-area">
+                    <h3>Uploaded File</h3>
+                    <div class="file-display" id="fileDisplay">UploadedFilename.pdf</div>
+                    <h3>Key Of Encryption</h3>
+                    <div class="key-input">
+                        <input type="text" id="keyInput" placeholder="Enter the key of encryption">
+                    </div>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="encrypt-decrypt" value="encrypt" checked> Encrypt File
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="encrypt-decrypt" value="decrypt"> Decrypt File
+                        </label>
+                    </div>
+                    <button class="action-button" id="downloadFile">Download File</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src = "scripts.js"></script>
+</body>
+</html>

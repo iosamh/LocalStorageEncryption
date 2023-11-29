@@ -1,0 +1,149 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', "Roboto";
+    background-color: #e5fbf5;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 900px;
+    width: 750px;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: #4DBC9C;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    margin-bottom: 1rem;
+    color: #a2a2a2;
+}
+
+.upload-box {
+    display: flex;
+    gap: 1rem;
+}
+
+.upload-box > *{
+    flex-basis: 50%;
+    flex-grow: 1;
+}
+
+.upload-area {
+    text-align: center;
+}
+
+.file-drag-area {
+    border: 2px dashed #4DBC9C;
+    border-radius: 10px;
+    
+    padding: 6rem;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.or {
+    margin: 0.5rem 0;
+}
+
+.browse-button {
+    background-color: #4DBC9C;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.file-display {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.encryption-area {
+    flex-basis: 250px;
+}
+
+.key-input input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.option {
+    margin-bottom: 0.25rem;
+}
+
+.action-button {
+    background-color: #4DBC9C;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.action-button:hover {
+    background-color: #44af91;
+}
+
+
+@media (max-width: 768px) {
+    .container{
+        width: 350px;
+    }
+
+    .upload-box {
+        flex-direction: column;
+        
+    }
+
+    .upload-area {
+        width: 50%; /* Full width on smaller screens */
+    }
+
+    .file-drag-area, .key-input input, .action-button {
+        width: calc(100% - 2rem); /* Account for padding */
+    }
+}
+
+/* Utility classes for visually hidden elements but accessible to screen readers */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
